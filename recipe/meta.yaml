@@ -13,7 +13,7 @@ source:
   patches: timezone.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   # turbodbc already has set the correct RPATHs, conda relocation breaks it
   # so skip it.
   binary_relocation: False
@@ -24,23 +24,22 @@ build:
 
 requirements:
   build:
-    - boost 1.64.*
+    - boost >=1.64
     - cmake
-    - numpy x.x
+    - numpy 1.11.*
     - pybind11
     - python
     - setuptools
     - six
     - toolchain
     - unixodbc  # [unix]
-    - pyarrow 0.6.*
+    - pyarrow 0.7.*
   run:
-    - boost 1.64.*
-    - numpy x.x
+    - numpy >=1.11
     - python
     - six
     - unixodbc  # [unix]
-    - pyarrow 0.6.*
+    - pyarrow 0.7.*
 
 test:
   imports:
