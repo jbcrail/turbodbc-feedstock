@@ -18,8 +18,7 @@ build:
   binary_relocation: False
   skip: true  # [win32]
   features:
-    - vc9   # [win and py27]
-    - vc14  # [win and py>=35]
+    - vc14  # [win]
 
 requirements:
   build:
