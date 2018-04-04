@@ -32,15 +32,15 @@ requirements:
     - setuptools
     - six
     - toolchain
-    - unixodbc  # [unix]
-    - pyarrow 0.9.*
+    - unixodbc      # [unix]
+    - pyarrow 0.9.* # [not (win and py27)]
   run:
     - numpy >=1.11  # [not (win and py>=36)]
     - numpy >=1.12  # [win and py>=36]
     - python
     - six
-    - unixodbc  # [unix]
-    - pyarrow 0.9.*
+    - unixodbc      # [unix]
+    - pyarrow 0.9.* # [not (win and py27)]
 
 test:
   imports:
